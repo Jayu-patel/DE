@@ -18,7 +18,7 @@ function Lists() {
                                 <p className='text-gray-500'>{e.address}</p>
                             </span>
                         </div>
-                        <div className='bed p-1 w-[30%] xs:w-auto xs:mt-3 mt-1 rounded-lg bg-blue-400 text-white grid place-items-center'>
+                        <div className='bed p-1 w-[30%] mt-1 rounded-lg bg-blue-400 text-white grid place-items-center'>
                             <h3>No. of beds: {e.bed}</h3>
                         </div>
                     </div>
