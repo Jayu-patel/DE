@@ -13,6 +13,10 @@
 .img_box img{
   opacity: 0.6;
 }
+.bed{
+  width: 30%;
+  margin-top: 4px;
+}
 
 @media screen and (max-width: 640px) {
   .box{
@@ -54,8 +58,9 @@
   .homeBox p{
     font-size: 1rem;
   }
+
   .bed{
-    width: auto;
+    width: 100%;
     margin-top: 12px;
   }
 }
