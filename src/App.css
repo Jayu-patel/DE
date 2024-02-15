@@ -20,7 +20,7 @@
 
 @media screen and (max-width: 640px) {
   .box{
-    /* background: white; */
+    background: white;
     color: white;
     color: rgb(37, 99, 235);
     right: 0;
