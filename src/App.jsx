@@ -33,9 +33,11 @@ function App() {
           dispatch(setLon(location.coordinates.lng))
         }
         else{
-          dispatch(setLat('0'))
-          dispatch(setLon('0'))
-          alert('Reload the page')
+          dispatch(setLat('23.2556078'))
+          dispatch(setLon('72.6592268'))
+          if(latitude == 23.2556078 && longitude == 72.6592268){
+            alert('Reload the page')
+          }
         }
       }
     }
