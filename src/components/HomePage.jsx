@@ -1,5 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import useGeoLocation from './useGeoLocation'
+import { setLat, setLon } from '../store/slices/locationSlice'
+import { useDispatch, useSelector } from 'react-redux'
+import Loader from './Loader'
 
 
 function HomePage() {
@@ -7,6 +11,9 @@ function HomePage() {
   const nav=()=>{
     navigate('/lists')
   }
+  const latitude = useSelector(s => s?.location?.latitude)
+
+  if(!latitude) return <div className='w-[100vw] h-[calc(100vh-60px)] grid place-items-center'><Loader/></div>
   return (
     <div className='w-[100vw] h-[calc(100vh-60px)]'>
         <div className='img_box grid place-items-center'>
@@ -22,7 +29,9 @@ function HomePage() {
                 transition-all
                 '
                 onClick={nav}
-                >Search</button>
+                >
+                  Search
+                </button>
             </div>
         </div>
     </div>
