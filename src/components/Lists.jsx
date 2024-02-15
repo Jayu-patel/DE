@@ -37,10 +37,14 @@ function Lists() {
                         </div>
                         <div className='bed p-1 rounded-lg bg-blue-400 text-white grid place-items-center'>
                             {
-                                latitude!='' ? <a href={`https://www.google.com/maps/dir/${latitude},${longitude}/${e.ad}`} target='_blank'>
-                                    <button>Route</button>
-                                </a> :
-                                <button onClick={fun}><NavLink to={'/'}>Route</NavLink></button>
+                                latitude!='' ? 
+                                    <button onClick={e=>{e.target.childNodes[0].click()}} className='w-[100%] h-[100%]'>
+                                        <a href={`https://www.google.com/maps/dir/${latitude},${longitude}/${e.ad}`} target='_blank'>
+                                            Route
+                                        </a> 
+                                    </button>
+                                    :
+                                    <button onClick={fun}><NavLink to={'/'}>Route</NavLink></button>
                             }
                         </div>
                     </div>
