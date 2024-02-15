@@ -26,7 +26,7 @@ function App() {
   const location = useGeoLocation()
 
   useEffect(() => {
-    if(latitude == ''){
+    if(latitude == '' || latitude == '23.2556078' || latitude == 23.2556078){
       if (location.loaded) {
         if(location.coordinates.lat != ''){
           dispatch(setLat(location.coordinates.lat))
