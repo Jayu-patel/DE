@@ -36,7 +36,7 @@ function App() {
           dispatch(setLat('23.2556078'))
           dispatch(setLon('72.6592268'))
           if(latitude == 23.2556078 && longitude == 72.6592268){
-            alert('Reload the page')
+            alert('Please reload page and allow Location')
           }
         }
       }

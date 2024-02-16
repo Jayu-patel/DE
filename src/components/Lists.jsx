@@ -1,16 +1,22 @@
 import React from 'react'
 import data from '../data/data'
 import { NavLink, useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { setLat } from '../store/slices/locationSlice'
 
 function Lists() {
     const navigate = useNavigate()
-   
+
+    const dispatch = useDispatch()
     const latitude = useSelector(s => s?.location?.latitude)
     const longitude = useSelector(s => s?.location?.longitude)
     const fun=()=>{
         alert('Please allow Location')
     }
+    // if(latitude == '23.2556078'){
+    //     alert("Please reload page and allow Location")
+    //     dispatch(setLat(''))
+    // }
     return (
     <div className='w-[100vw] py-5 bg-gray-200'>
         <div className='w-[75%] xs:w-[85%] mx-auto mb-4'>

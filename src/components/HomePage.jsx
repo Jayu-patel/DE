@@ -11,6 +11,7 @@ function HomePage() {
   const nav=()=>{
     navigate('/lists')
   }
+
   const latitude = useSelector(s => s?.location?.latitude)
 
   if(!latitude) return <div className='w-[100vw] h-[calc(100vh-60px)] grid place-items-center'><Loader/></div>
