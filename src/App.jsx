@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import useGeoLocation from './components/useGeoLocation'
 import { useEffect } from 'react'
 import { setLat, setLon } from './store/slices/locationSlice'
+import HospitalPage from './components/HospitalPage'
 
 function App() {
   const router = createBrowserRouter([
@@ -16,6 +17,7 @@ function App() {
       children: [
         {path: '/', element: <HomePage/>},
         {path: '/lists', element: <Lists/>},
+        {path: '/hospital/:id', element: <HospitalPage/>}
       ]
     }
   ])
@@ -44,8 +46,6 @@ function App() {
   }, [location.loaded,latitude,longitude]);
 
   useEffect(() => {
-    console.log(latitude);
-    console.log(longitude);
   }, [latitude,longitude]);
   return (
     <RouterProvider router={router} />

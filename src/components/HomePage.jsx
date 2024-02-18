@@ -16,11 +16,13 @@ function HomePage() {
 
   if(!latitude) return <div className='w-[100vw] h-[calc(100vh-60px)] grid place-items-center'><Loader/></div>
   return (
-    <div className='w-[100vw] h-[calc(100vh-60px)]'>
+    <div className='w-[100vw] h-[calc(100vh-60px)] min-h-[calc(100vh-60px)]'>
         <div className='img_box grid place-items-center'>
             <img className='object-cover' src='hospital.jpg' alt="Error" />
             <div className='homeBox absolute text-white text-center mt-[-80px]'>
-                <h1 className='text-[7rem] font-semibold'>VBSS</h1>
+                <h1 className='text-[7rem] font-semibold'>
+                  VBSS
+                </h1>
                 <p className='text-[1.5rem]'>The main purpose of this website is to provide the user with the nearest hospitals which have vacant beds</p>
                 <button className='text-[1.2rem] 
                 mt-[10px] 

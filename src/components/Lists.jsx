@@ -7,16 +7,11 @@ import { setLat } from '../store/slices/locationSlice'
 function Lists() {
     const navigate = useNavigate()
 
-    const dispatch = useDispatch()
     const latitude = useSelector(s => s?.location?.latitude)
     const longitude = useSelector(s => s?.location?.longitude)
     const fun=()=>{
         alert('Please allow Location')
     }
-    // if(latitude == '23.2556078'){
-    //     alert("Please reload page and allow Location")
-    //     dispatch(setLat(''))
-    // }
     return (
     <div className='w-[100vw] py-5 bg-gray-200'>
         <div className='w-[75%] xs:w-[85%] mx-auto mb-4'>
@@ -29,7 +24,9 @@ function Lists() {
                 data.map(e=>{
                     return <div key={e.id} className='border-black border-[1px] px-4 py-6 pb-16 bg-white shadow-lg bg-no-repeat bg-cover' 
                         style={{backgroundImage : "url('bg.jpg')"}}>
-                        <h1 className='text-[1.3rem] text-blue-500 font-semibold'>{e.title}</h1>
+                        <NavLink to={`/hospital/${e.id}`}>
+                            <h1 className='text-[1.3rem] text-blue-500 font-semibold'>{e.title}</h1>
+                        </NavLink>
                         <div className='flex'>
                             <span>
                                 <i className="fa-solid fa-location-dot"></i>
@@ -46,7 +43,8 @@ function Lists() {
                                 latitude!='' ? 
                                     <button onClick={e=>{e.target.childNodes[0].click()}} className='w-[100%] h-[100%]'>
                                         <a href={`https://www.google.com/maps/dir/${latitude},${longitude}/${e.ad}`} target='_blank'>
-                                            Route
+                                        <i className="fa-solid fa-diamond-turn-right mr-1"></i>
+                                            Get Directions
                                         </a> 
                                     </button>
                                     :
