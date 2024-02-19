@@ -8,6 +8,7 @@ import useGeoLocation from './components/useGeoLocation'
 import { useEffect } from 'react'
 import { setLat, setLon } from './store/slices/locationSlice'
 import HospitalPage from './components/HospitalPage'
+import NotFound from './components/NotFound'
 
 function App() {
   const router = createBrowserRouter([
@@ -17,7 +18,8 @@ function App() {
       children: [
         {path: '/', element: <HomePage/>},
         {path: '/lists', element: <Lists/>},
-        {path: '/hospital/:id', element: <HospitalPage/>}
+        {path: '/hospital/:id', element: <HospitalPage/>},
+        {path: '*', element: <NotFound/>}
       ]
     }
   ])

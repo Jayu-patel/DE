@@ -17,14 +17,17 @@ function HospitalPage() {
             <div className='p-5 xs:p-3'>
                 <div className='b'>
                     <h1>{hospital.title}</h1>
-                    <p>
-                        <span className='text-green-600'>4.5</span>
-                        <span className='text-yellow-300 pr-2'>
+                    <p>                        {
+                            hospital.ratings >= 4 ? 
+                            <span className='text-green-600'>{hospital.ratings}</span> : 
+                            <span className='text-yellow-500'>{hospital.ratings}</span>
+                        }
+                        <span className='text-yellow-500 pr-2'>
                             <i class="fa-solid fa-star"></i>
                         </span>
                         Ratings
                     </p>
-                    <h2><i class="fa-solid fa-location-dot"></i> {hospital.address}</h2>
+                    <h2><i className="fa-solid fa-location-dot"></i> {hospital.address}</h2>
                 </div>
 
                 <div className='b'>

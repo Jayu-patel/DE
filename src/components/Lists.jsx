@@ -25,7 +25,7 @@ function Lists() {
                     return <div key={e.id} className='border-black border-[1px] px-4 py-6 pb-16 bg-white shadow-lg bg-no-repeat bg-cover' 
                         style={{backgroundImage : "url('bg.jpg')"}}>
                         <NavLink to={`/hospital/${e.id}`}>
-                            <h1 className='text-[1.3rem] text-blue-500 font-semibold'>{e.title}</h1>
+                            <h1 className='text-[1.5rem] text-blue-500 font-semibold'>{e.title}</h1>
                         </NavLink>
                         <div className='flex'>
                             <span>

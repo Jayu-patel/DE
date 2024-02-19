@@ -28,12 +28,12 @@
 }
 
 .b h1{
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
 .b .text{
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 5px;
 }
 
@@ -108,11 +108,11 @@
   }
   
   .b h1{
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
   
   .b .text{
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
   .b p{
     width: 90%;

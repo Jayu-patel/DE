@@ -6,6 +6,7 @@ const data = [
         fullAdd: 'Plot No1285, Sector - 6 D, Gandhinagar Sector 5, Gandhinagar-Gujarat - 382006 (Near Gh 3 Cir, Opposite Civil Hospital, Sector6 D)',
         bed: 5,
         ad: `Namo'stuTe Hospitals, Plot No-1285, Sector-6 D, Near, GH 3 Cir, opposite Civil Hospital, Gandhinagar, Gujarat 382006`,
+        ratings: 4.5,
     },
     {
         id: 2,
@@ -14,6 +15,7 @@ const data = [
         fullAdd: 'C- BLOCK, VRUNDAVAN TRADE CENTER, RELIANCE CROSS ROAD TO KUDASAN GAM, Kudasan, Gandhinagar-Gujarat - 382421 (Opp. KANAM PARTY PLOT)',
         bed: 7,
         ad: `Radhe Multi-Speciality Hospital, VRUNDAVAN TRADE CENTER, C' Block, opp. Kanam Party Plot, Kudasan, Gandhinagar, Gujarat 382421`,
+        ratings: 4.1,
     },
     {
         id: 3,
@@ -22,6 +24,7 @@ const data = [
         fullAdd: '118/1, Harsidh Nagar Society, Kolavda Road, Gandhinagar Sector 24, Gandhinagar-Gujarat - 382024',
         bed: 1,
         ad: `Rudraksh Children Hospital, 118, Kolavada Rd, opposite Rajkot Nagrik Bank, Anand Nagar Society, Sector 24, Gandhinagar, Gujarat 382024`,
+        ratings: 4.0,
     },
     {
         id: 4,
@@ -30,6 +33,7 @@ const data = [
         fullAdd: '958/2, Sector 7-C, Gh 3 Road, Gandhinagar Sector 7, Gandhinagar-Gujarat - 382007 (Opposite S T Bus Stand)',
         bed: 1,
         ad: `Vinayak Orthopaedic & Dental Hospital, Bus Stand, 958/2, Sector 7/C, GH 3 Cir, opposite S T, Gandhinagar, Gujarat 382007`,
+        ratings: 4.2,
     },
     {
         id: 5,
@@ -38,6 +42,7 @@ const data = [
         fullAdd: '3rd Floor, B Block, Radhe Signature, Opposite Sahajanand City, Kudasan, Gandhinagar-Gujarat - 382421 (Sardar Chowk)',
         bed: 5,
         ad: `3rd Floor, Vivanta Hospital - Best Women's Hospital and Gynaecologist in Gandhinagar, Laparoscopic Surgeon and Urologist in Gandhinagar, B Block, Radhe Signature, Sardar Chowk Rd, opp. Sahjanand City, Kudasan, Gandhinagar, Gujarat 382419`,
+        ratings: 4.6,
     },
     {
         id: 6,
@@ -46,6 +51,7 @@ const data = [
         fullAdd: 'Office No - 302, Third Floor, Sargasan Cross Road, Sargasan, Gandhinagar-Gujarat - 382421 (Above Jai Bhawani Vada Pao Sarthak Mall)',
         bed: 2,
         ad: `CHAAHAT HOSPITAL AND ICU, CHAAHAT HOSPITAL AND ICU 301,3RD FLOOR, SARTHAK MALL,KH0, Sargasan Cross Rd, Gandhinagar, Gujarat 382421`,
+        ratings: 3.9,
     },
     {
         id: 7,
@@ -54,6 +60,7 @@ const data = [
         fullAdd: 'Plot Number 1A, Airport Gandhinagar Highway, Bhat, Gandhinagar-Gujarat - 382428 (Near Indira Bridge, GIDC Estate)',
         bed: 1,
         ad: `Plot No, Apollo Hospital, 1A, Gandhinagar - Ahmedabad Rd, GIDC Bhat, estate, Ahmedabad, Gujarat 382428`,
+        ratings: 4.1,
     },
     {
         id: 8,
@@ -62,6 +69,7 @@ const data = [
         fullAdd: 'Plot Number 735/B Ukti Maternity Home, Sector 22, Gandhinagar Sector 22, Gandhinagar-Gujarat - 382021 (Near Panchdev Temple and Behind Rangmanch)',
         bed: 10,
         ad: `Ukti Maternity Hospital, 735/3, opposite Rangmanch, Vastunirman Society, Sector 22, Gandhinagar, Gujarat 382022`,
+        ratings: 4.5,
     },
     {
         id: 9,
@@ -70,6 +78,7 @@ const data = [
         fullAdd: 'Plot 949/2, Gandhinagar Sector 7, Gandhinagar-Gujarat - 382007 (Opposite St Depo Station, Sector 7 C)',
         bed: 9,
         ad: `Shreeji Eye hospital & x ray sonography, 949/2 ,Opp S. T. Depot Road Number 3, Gandhinagar Main Depot Rd, opposite S T, Sector 7C, Sector 7, Gandhinagar, Gujarat 382007`,
+        ratings: 4.1,
     },
     {
         id: 10,
@@ -78,6 +87,7 @@ const data = [
         fullAdd: '304, 3rd Floor, Radhe Square, Gandhinagar, Reliance Cross Road, Kudasan, Gandhinagar-Gujarat - 382421',
         bed: 6,
         ad: `Disha Eye Hospital, 333-334, 3rd floor, B-block, Pramukh Mastana, nr. Reliance Cross Road, Kudasan, Gandhinagar, Gujarat 382421`,
+        ratings: 3.8,
     },
     {
         id: 11,
@@ -86,6 +96,7 @@ const data = [
         fullAdd: '590 2, Secror 7b, Gandhinagar Sector 7, Gandhinagar-Gujarat - 382007 (Near Ghh 2 Corner, Near Patel Parlour)',
         bed: 2,
         ad: `Yashdeep hospital || Best Hospital, Medical Hospital, Heart Hospital, Emergency Hospital, CH Rd, Sector 22, Gandhinagar, Gujarat 382021`,
+        ratings: 3.9,
     },
     {
         id: 12,
@@ -94,6 +105,7 @@ const data = [
         fullAdd: '2Nd Floor Sarthak Complex, KH Road, Sargasan, Gandhinagar-Gujarat - 382421 (Near Sargasan Cross Road)',
         bed: 7,
         ad: `M Cure hospital, 2nd FLOOR SARTHAK MALL KH-ROAD, Sargasan Cross Rd, Sargasan, Gandhinagar, Gujarat 382421`,
+        ratings: 4.1,
     },
     {
         id: 13,
@@ -102,6 +114,7 @@ const data = [
         fullAdd: 'Vachhani Speciality Care Hospitals, Servey No - 148, Plot No - 154/2, Kudasan, Gandhinagar-Gujarat - 382421 (Opposite Pramukh Harmony)',
         bed: 5,
         ad: `Survey No 148, Plot No 154/2, Vachhani Speciality Care Hospitals, opp. PRAMUKH HARMONY, Sargasan, Gandhinagar, Gujarat 382421`,
+        ratings: 4.5,
     },
     {
         id: 14,
@@ -110,6 +123,7 @@ const data = [
         fullAdd: 'Building No.Gj Sh 217, Paliyad, Gandhinagar-Gujarat - 382735 (Near Vada Road)',
         bed: 2,
         ad: `9HM3+FMC Somabhai J Patel Hospital, Paliyad, Gujarat 382735`,
+        ratings: 4.3,
     },
     {
         id: 15,
@@ -118,6 +132,7 @@ const data = [
         fullAdd: 'Krishna Complex., Naroda Road., Chiloda Gandhi Nagar, Gandhinagar-Gujarat - 382355 (Near Mota Chiloda)',
         bed: 3,
         ad: `211-215, Second Floor, Krishna Children Hospital and ICU, B Block, Radhey Signature, opposite Sahjanand City, Kudasan, Gandhinagar, Gujarat 382421`,
+        ratings: 4.4,
     },
 ]
 
