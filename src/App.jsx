@@ -40,6 +40,13 @@ function App() {
 
   useEffect(() => {
   }, [latitude,longitude]);
+
+  setInterval(()=>{
+    if(location.error != null){
+      alert('Please reload the page & allow location')
+      window.location.reload(true)
+    }
+  },15000)
   return (
     <RouterProvider router={router} />
   )
