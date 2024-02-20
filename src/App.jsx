@@ -30,19 +30,10 @@ function App() {
   const location = useGeoLocation()
 
   useEffect(() => {
-    if(latitude == '' || latitude == '23.2556078' || latitude == 23.2556078){
-      if (location.loaded) {
-        if(location.coordinates.lat != ''){
+    if(latitude == ''){
+      if (location.loaded && location.coordinates.lat != '') {
           dispatch(setLat(location.coordinates.lat))
           dispatch(setLon(location.coordinates.lng))
-        }
-        else{
-          dispatch(setLat('23.2556078'))
-          dispatch(setLon('72.6592268'))
-          if(latitude == 23.2556078 && longitude == 72.6592268){
-            alert('Please reload page and allow Location')
-          }
-        }
       }
     }
   }, [location.loaded,latitude,longitude]);

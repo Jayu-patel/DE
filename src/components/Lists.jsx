@@ -48,7 +48,7 @@ function Lists() {
                                         </a> 
                                     </button>
                                     :
-                                    <button onClick={fun}><NavLink to={'/'}>Route</NavLink></button>
+                                    <button onClick={fun}><NavLink to={'/'}>Get Directions</NavLink></button>
                             }
                         </div>
                     </div>

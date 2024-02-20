@@ -8,17 +8,21 @@ import Loader from './Loader'
 
 function HomePage() {
   const navigate = useNavigate()
+  const latitude = useSelector(s => s?.location?.latitude)
   const nav=()=>{
-    navigate('/lists')
+    if(latitude != "") navigate('/lists')
+    else{
+      alert("Please allow location")
+      window.location.reload()
+    }
   }
 
-  const latitude = useSelector(s => s?.location?.latitude)
 
   if(!latitude) return <div className='w-[100vw] h-[calc(100vh-60px)] grid place-items-center'><Loader/></div>
   return (
     <div className='w-[100vw] h-[calc(100vh-60px)] overflow-hidden'>
         <div className='img_box grid place-items-center'>
-            <img className='object-cover' src='hospital.jpg' alt="Error" />
+            <img src='hospital.jpg' alt="Error" />
             <div className='homeBox absolute text-white text-center mt-[-80px]'>
                 <h1 className='text-[7rem] font-semibold'>
                   VBSS

@@ -17,11 +17,11 @@ function Navbar() {
         <div className='ml-8 xss:ml-2 xs:ml-1'>
             <h1 className='text-[2.5rem] font-semibold cursor-pointer' onClick={()=>{navigate('/')}}>VBSS</h1>
         </div>
-        <div className={'mr-8 overflow-hidden w-[25%] list-none my-auto transition-all text-[1.2rem] [&_li]:cursor-pointer xss:w-[40%] xs:shadow-2xl xs:w-auto xs:mr-0 box '+menu}>
+        <div className={'mr-8 overflow-hidden w-[20%] list-none my-auto transition-all text-[1.2rem] [&_li]:cursor-pointer xss:w-[40%] xs:shadow-2xl xs:w-auto xs:mr-0 box '+menu}>
             <div className='flex justify-between box2'>
+                <li onClick={()=>{navigate('/')}}>Home</li>
                 <li>Profile</li>
                 <li>Settings</li>
-                <li>Log out</li>
             </div>
         </div>
         <div className='hidden xs:block my-auto mr-4 text-[2rem]'>
