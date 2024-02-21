@@ -4,7 +4,7 @@ import { Outlet, ScrollRestoration } from 'react-router-dom'
 
 function MainLayout() {
   return (
-    <div className=''>
+    <div className='overflow-x-hidden'>
         <ScrollRestoration
             getKey={(location, matches) => {
             return location.pathname;

@@ -13,7 +13,7 @@ function Lists() {
         alert('Please allow Location')
     }
     return (
-    <div className='w-[100vw] py-5 bg-gray-200'>
+    <div className='w-[100vw] pt-[65px] py-5 bg-gray-200'>
         <div className='w-[75%] xs:w-[85%] mx-auto mb-4'>
             <button className='bg-white px-3 py-2 border-black border-[1px] rounded-md fixed' onClick={()=>{navigate('/')}}>
                 <i className="fa-solid fa-arrow-left"></i> Back
