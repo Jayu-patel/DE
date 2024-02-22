@@ -46,7 +46,7 @@ function App() {
       alert('Please reload the page & allow location')
       window.location.reload(true)
     }
-  },15000)
+  },11000)
   return (
     <RouterProvider router={router} />
   )

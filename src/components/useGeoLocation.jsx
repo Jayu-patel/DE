@@ -37,7 +37,7 @@ function useGeoLocation() {
             };
 
             const options = {
-                enableHighAccuracy: true,
+                // enableHighAccuracy: true,
                 timeout: 5000, // 5 seconds timeout
                 maximumAge: 0
             };
