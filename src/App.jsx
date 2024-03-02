@@ -1,5 +1,5 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './App.css'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import HomePage from './components/HomePage'
 import MainLayout from './components/MainLayout'
 import Lists from './components/Lists'
@@ -38,8 +38,7 @@ function App() {
     }
   }, [location.loaded,latitude,longitude]);
 
-  useEffect(() => {
-  }, [latitude,longitude]);
+  useEffect(() => {}, [latitude,longitude]);
 
   setInterval(()=>{
     if(location.error != null){

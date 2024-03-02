@@ -13,7 +13,8 @@ function useGeoLocation() {
     useEffect(() => {
         let isMounted = true;
         if ("geolocation" in navigator) {
-            const successCallback = (position) => {
+
+            const success = (position) => {
                 if (isMounted) {
                     setLocation({
                         loaded: true,
@@ -26,12 +27,12 @@ function useGeoLocation() {
                 }
             };
 
-            const errorCallback = (error) => {
+            const error = (e) => {
                 if (isMounted) {
                     setLocation((prevLocation) => ({
                         ...prevLocation,
                         loaded: true,
-                        error: error.message
+                        error: e.message
                     }));
                 }
             };
@@ -42,7 +43,7 @@ function useGeoLocation() {
                 maximumAge: 0
             };
 
-            navigator.geolocation.getCurrentPosition(successCallback, errorCallback, options);
+            navigator.geolocation.getCurrentPosition(success, error, options);
         } else {
             if (isMounted) {
                 setLocation((prevLocation) => ({
@@ -55,61 +56,10 @@ function useGeoLocation() {
 
         return () => {
             isMounted = false;
-        };
-    }, []);
+        }
+    }, [])
 
-    return location;
+    return location
 }
 
-export default useGeoLocation;
-
-// import { useEffect, useState } from 'react'
-
-// function useGeoLocation() {
-//     const [location, setLocation] = useState({
-//         loaded: false,
-//         coordinates: {
-//             lat: '',
-//             lng: '',
-//         }
-//     })
-
-//     const sucsess = location => {
-//         setLocation({
-//             loaded: true,
-//             coordinates: {
-//                 lat: location.coords.latitude,
-//                 lng: location.coords.longitude,
-//             }
-//         })
-//     }
-
-//     const onError = error =>{
-//         setLocation({
-//             loaded: true,
-//             error,
-//         })
-//     }
-
-//     useEffect(()=>{
-//         if(!("geolocation" in navigator)){
-//             onError({
-//                 code: 0,
-//                 message: "Geolocation not supported"
-//             })
-//             setLocation(state=>({
-//                 ...state,
-//                 loaded: true,
-//                 error: {
-//                     code: 0,
-//                     message: "Geolocation not supported"
-//                 }
-//             }))
-//         }
-//         navigator.geolocation.getCurrentPosition(sucsess,onError)
-//     },[])
-
-//     return location
-// }
-
-// export default useGeoLocation
+export default useGeoLocation

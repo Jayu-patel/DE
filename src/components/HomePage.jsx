@@ -1,8 +1,5 @@
-import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import useGeoLocation from './useGeoLocation'
-import { setLat, setLon } from '../store/slices/locationSlice'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import Loader from './Loader'
 
 
@@ -35,8 +32,7 @@ function HomePage() {
                 px-5 py-3 rounded-lg
                 transition-all
                 '
-                onClick={nav}
-                >
+                onClick={nav}>
                   Search
                 </button>
             </div>
