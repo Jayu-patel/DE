@@ -1,14 +1,24 @@
 import './App.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import HomePage from './components/HomePage'
-import MainLayout from './components/MainLayout'
-import Lists from './components/Lists'
-import { useDispatch, useSelector } from 'react-redux'
-import useGeoLocation from './components/useGeoLocation'
 import { useEffect } from 'react'
 import { setLat, setLon } from './store/slices/locationSlice'
-import HospitalPage from './components/HospitalPage'
-import NotFound from './components/NotFound'
+import { useDispatch, useSelector } from 'react-redux'
+import MainLayout from './components/tools/MainLayout'
+import HomePage from './components/hospital/HomePage'
+import HospitalPage from './components/hospital/HospitalPage'
+import Lists from './components/hospital/Lists'
+import NotFound from './components/tools/NotFound'
+import HomePage2 from './components/hospital/HomePage2'
+import Patient from './components/hospital/Patient'
+import Username from './components/auth/Username'
+import Recovery from './components/auth/Recovery'
+import Password from './components/auth/Password'
+import Reset from './components/auth/Reset'
+import Profile from './components/auth/Profile'
+import Register from './components/auth/Register'
+import useGeoLocation from './components/hospital/useGeoLocation'
+import { Authorization, UserProtect} from './middleware/auth'
+import LoadLocation from './components/hospital/LoadLocation'
 
 function App() {
   const router = createBrowserRouter([
@@ -16,36 +26,25 @@ function App() {
       path: '/',
       element: <MainLayout/>,
       children: [
-        {path: '/', element: <HomePage/>},
+        {path: '/', element: <HomePage2/>},
         {path: '/lists', element: <Lists/>},
         {path: '/hospital/:id', element: <HospitalPage/>},
+        {path: '/patient', element: <Patient/>},
+        {path: '/load', element: <LoadLocation/>},
+
+        { path : '/username', element : <Username/> },
+        { path : '/register', element :   <Register/>},
+        { path : '/password', element : <UserProtect><Password/></UserProtect>},
+        { path : '/recovery', element : <Recovery/> },
+        { path : '/reset', element : <Reset/> },
+        { path : '/profile', element : <Authorization><Profile/></Authorization> },
         {path: '*', element: <NotFound/>}
       ]
     }
   ])
   const latitude = useSelector(s => s?.location?.latitude)
   const longitude = useSelector(s => s?.location?.longitude)
-  const dispatch = useDispatch()
-  
-  const location = useGeoLocation()
 
-  useEffect(() => {
-    if(latitude == ''){
-      if (location.loaded && location.coordinates.lat != '') {
-          dispatch(setLat(location.coordinates.lat))
-          dispatch(setLon(location.coordinates.lng))
-      }
-    }
-  }, [location.loaded,latitude,longitude]);
-
-  useEffect(() => {}, [latitude,longitude]);
-
-  setInterval(()=>{
-    if(location.error != null){
-      alert('Please reload the page & allow location')
-      window.location.reload(true)
-    }
-  },8000)
   return (
     <RouterProvider router={router} />
   )
