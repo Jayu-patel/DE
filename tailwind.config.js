@@ -14,6 +14,14 @@ export default {
       
       'xss': {'min': '0px', 'max': '1000px'},
 
+      'size_I': {'min': '0px', 'max': '390px'},
+      
+      'size_II': {'min': '0px', 'max': '640px'},
+
+      'size_III': {'min': '400px', 'max': '690px'},
+      
+      'size_IIII': {'min': '0px', 'max': '1000px'},
+
       'sm': {'min': '640px', 'max': '767px'},
       // => @media (min-width: 640px and max-width: 767px) { ... }
 
