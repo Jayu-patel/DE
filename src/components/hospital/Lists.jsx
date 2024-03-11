@@ -25,6 +25,8 @@ function Lists() {
         <div className='pt-9 grid grid-cols-auto-fill-600 gap-7 w-[75%] xs:w-[85%] mx-auto xs:grid-cols-auto-fill-601'>
             {
                 data.map(e=>{
+                    var num = Math.random() * (10 - 1) + 1;
+                    num = Math.ceil(num)
                     return <div key={e.id} className='border-black border-[1px] px-4 py-6 pb-16 bg-white shadow-lg bg-no-repeat bg-cover' 
                         style={{backgroundImage : "url('bg.jpg')"}}>
                         <NavLink to={`/hospital/${e.id}`}>
@@ -39,7 +41,7 @@ function Lists() {
                             </span>
                         </div>
                         <div className='bed p-1 rounded-lg bg-blue-400 text-white grid place-items-center my-2'>
-                            <h3>No. of beds: {e.bed}</h3>
+                            <h3>No. of beds: {num}</h3>
                         </div>
                         <div className='bed p-1 rounded-lg bg-blue-400 text-white grid place-items-center'>
                             {
